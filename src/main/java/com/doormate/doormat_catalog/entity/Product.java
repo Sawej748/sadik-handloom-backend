@@ -16,31 +16,37 @@ public class Product {
     private Long id;
 
     @Column(nullable = false)
-    private String name; // Doormat title
+    private String name;
 
     @Column(length = 1000)
-    private String description; // Product details
+    private String description;
 
     @Column(nullable = false)
-    private String material; // Coir, Rubber, Cotton, Microfiber
+    private String material;
 
     @Column(nullable = false)
-    private String size; // e.g., 16x24 inches
+    private String size;
 
     @Column(nullable = false)
-    private String availableColors; // e.g., Brown, Red, Black
+    private String availableColors;
 
     @Column(nullable = false, precision = 10, scale = 2)
-    private BigDecimal price; // Price in INR
+    private BigDecimal price;
 
     @Column(nullable = false)
-    private boolean inStock = true; // Stock availability
+    private boolean inStock = true;
 
     @Column(nullable = false)
-    private String imageUrl; // Cloudinary image URL
+    private String imageUrl;
 
     @Column(nullable = false)
-    private String imagePublicId; // Cloudinary ID for deletion
+    private String imagePublicId;
+
+    @Column(length = 4000)
+    private String extraImageUrls;
+
+    @Column(length = 2000)
+    private String extraImagePublicIds;
 
     @CreationTimestamp
     @Column(updatable = false)
